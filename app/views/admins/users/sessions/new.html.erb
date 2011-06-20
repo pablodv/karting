@@ -1,0 +1,14 @@
+<h2>Login</h2>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <fieldset class="inputs">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </fieldset>
+  <fieldset class="buttoms">
+    <%= f.submit "Sign in" %>
+  </fieldset>
+<% end %>

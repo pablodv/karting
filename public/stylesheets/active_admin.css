@@ -5,9 +5,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+dl, dt, dd, ol, ul, li, legend {
   margin: 0;
   padding: 0;
   border: 0;
@@ -159,6 +157,16 @@ header nav a, header nav a:visited{
 header nav a:hover, header nav a.current{
   background: #7B8389;
   color: white;
+}
+header p.user{
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  color: #AAA;
+}
+header p a{
+  color: #CDCDCD;
+  text-decoration: none;
 }
 /*----------------------------*/
 /*TITLE BAR*/
@@ -337,5 +345,26 @@ article table th, article table td{
   padding: 8px 12px 6px 12px;
   vertical-align: top;
   border-bottom: 1px solid #E8E8E8;
+}
+/*----------------------------*/
+/*NOTICES*/
+.flash_notice{
+  float: left;
+  font-size: 1.0em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#87A28B), to(#657B6A));
+  background: -moz-linear-gradient(-90deg, #87A28B, #657B6A);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#87A28B, endColorstr=#657B6A);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#87A28B, endColorstr=#657B6A);
+  border-bottom: 1px solid #44484B;
+  box-shadow: 0 1px 2px #AAA;
+  -moz-box-shadow: 0 1px 2px #AAA;
+  -webkit-box-shadow: 0 1px 2px #AAA;
+  text-shadow: #222 0 1px 0;
+  border: none;
+  font-weight: bold;
+  padding: 10px 10px 8px 10px;
+  margin: 21px;
+  color: white;
+  width: 96%;
 }
 /*----------------------------*/

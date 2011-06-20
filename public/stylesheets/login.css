@@ -1,0 +1,95 @@
+body{
+  background: #E8E9EA;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 150%;
+  font-size: 72%;
+  margin: 0;
+  padding: 0;
+  color: #323537;
+}
+#login{
+  box-shadow: 0 1px 2px #AAA;
+  -moz-box-shadow: 0 1px 2px #AAA;
+  -webkit-box-shadow: 0 1px 2px #AAA;
+  background: white;
+  padding: 13px 30px;
+  width: 500px;
+  margin: 70px auto;
+}
+
+#login h2{
+  box-shadow: 0 1px 2px #AAA;
+  -moz-box-shadow: 0 1px 2px #AAA;
+  -webkit-box-shadow: 0 1px 2px #AAA;
+  padding: 5px 10px 3px 10px;
+  font-size: 1.0em;
+  font-weight: bold;
+  line-height: 140%;
+  margin: -13px -30px 20px -30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6A7176), to(#4D5256));
+  background: -moz-linear-gradient(-90deg, #6A7176, #4D5256);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6A7176, endColorstr=#4D5256);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6A7176, endColorstr=#4D5256);
+  border-bottom: 1px solid #44484B;
+  text-shadow: black 0 1px 0;
+  color: white;
+  margin: -13px -30px 20px -30px;
+}
+
+form fieldset{
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  background: none;
+  padding: 0;
+  margin-bottom: 0;
+  border: 0px;
+}
+form fieldset.inputs {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+form fieldset.buttons { margin-top: 15px; }
+form input[type="email"], form input[type="password"],form textarea {
+  width: 70%;
+  border: 1px solid #C9D0D6;
+  font-size: 0.95em;
+  outline: none;
+  padding: 8px 10px;
+}
+form input[type="email"]:focus, form input[type="password"]:focus, form textarea:focus {
+  border: 1px solid #99A2AA;
+  box-shadow: 0 0 4px #99A2AA;
+  -moz-box-shadow: 0 0 4px #99A2AA;
+  -webkit-box-shadow: 0 0 4px #99A2AA;
+}
+form fieldset label {
+  display: block;
+  width: 20%;
+  float: left;
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #5E6469;
+}
+form input[type="submit"] {
+  box-shadow: 0 1px 2px #AAA;
+  -moz-box-shadow: 0 1px 2px #AAA;
+  -webkit-box-shadow: 0 1px 2px #AAA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#838A90), to(#414549));
+  background: -moz-linear-gradient(-90deg, #838A90, #414549);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#838A90, endColorstr=#414549);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#838A90, endColorstr=#414549);
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+  text-shadow: black 0 1px 0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.0em;
+  cursor: pointer;
+  padding: .6em 1.4em .5em 1.3em;
+  border: none;
+  color: #EFEFEF;
+  float:left;
+}

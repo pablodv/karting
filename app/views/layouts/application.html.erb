@@ -2,44 +2,39 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-
-    <title></title>
-
+    <title>Sistema de Gestión</title>
     <%= stylesheet_link_tag 'active_admin' %>
     <%= javascript_include_tag 'modernizr-1.7.min' %>
     <%= csrf_meta_tag %>
   </head>
   <body>
-    <div id="wrapper">
+    <header>
+      <h1>Karting Admin</h1>
+      <%= yield :header %>
+      <nav>
+        <%= link_to "Clients", admins_clients_path, :class => current_klass('clients') %>
+        <%= link_to "Sales","#", :class => current_klass('sales') %>
+      </nav>
+      <p class="user">
+        <span><%= current_admin.email %></span>
+        <%= link_to "Logout", destroy_admin_session_path %>
+      </p>
+    </header>
 
-      <header>
-        <h1>Karting Admin</h1>
-        <%= yield :header %>
-        <nav>
-          <%= link_to "Clients", admins_clients_path, :class => current_klass('clients') %>
-          <%= link_to "Sales","#", :class => current_klass('sales') %>
-        </nav>
-      </header>
-
-      <div id="title_bar">
-        <h2><%= resource_class.human_name.titleize %></h2>
-        <%#= link_to "New #{ resource_class.human_name }", new_resource_path, :class => "buttom" %>
-      </div>
-
-      <%= flash[:notice] %>
-
-      <section>
-        <%= yield %>
-      </section>
-
-      <aside>
-        <%= yield :sidebar %>
-      <aside>
-
-      <footer>
-        <%= yield :footer %>
-      </footer>
-
+    <div id="title_bar">
+      <h2><%= resource_class.human_name.titleize %></h2>
+      <%= link_to "New #{ resource_class.human_name }", new_resource_path, :class => "buttom" %>
     </div>
+
+    <% if flash[:notice] %>
+      <div class="flash_notice"><%= flash[:notice] %></div>
+    <% end %>
+
+    <section><%= yield %></section>
+
+    <aside><%= yield :sidebar %><aside>
+
+    <footer><%= yield :footer %></footer>
+
   </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <title>Sistema de Gestión</title>
+
+    <%= stylesheet_link_tag 'login' %>
+    <%= javascript_include_tag 'modernizr-1.7.min' %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="login">
+      <%= yield %>
+    </div>
+  </body>
+</html>
