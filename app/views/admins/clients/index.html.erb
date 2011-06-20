@@ -1,0 +1,28 @@
+<table cellspacing="0" class="index_table" cellpadding="0" id="orders" border="0">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Document</th>
+      <th>Genders</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr class="<%= cycle('odon','even') %>">
+        <td><%= client.code %></td>
+        <td><%= client.first_name %></td>
+        <td><%= client.last_name %></td>
+        <td><%= client.document %></td>
+        <td><%= client.gender %></td>
+        <td>
+          <%= link_to "Edit", edit_admins_client_path(client) %>
+          <%= link_to "Show", admins_client_path(client) %>
+          <%= link_to "Delete", admins_client_path(client), :method => :delete, :confirm => "Are you sure?" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,19 @@
+<%= form_for [:admins, @client] do |f| %>
+  <fieldset class="inputs">
+    <%= f.label :code %>
+    <%= f.text_field :code %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <%= f.label :document %>
+    <%= f.text_field :document %>
+    <%= f.label :gender %>
+    <%= f.select :gender, ['male', 'female'] %>
+
+  </fieldset>
+  <fieldset class="buttons">
+    <%= f.submit %>
+    <%= link_to "Cancel", collection_path, :class => "buttom" %>
+  </fieldset>
+<% end %>
